@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.104.2">
+  <link rel="shortcut icon" href="logoService.jpg" />
+  <title>RICOCHET</title>
+
+  <link href="/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      max-width: 600px;
+    }
+
+    .card {
+      border: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .py-5 {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    .lead {
+      font-size: 1.25rem;
+      font-weight: 300;
+    }
+
+    .form-check-label {
+      font-weight: 500;
+    }
+
+    #yapeQRContainer img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+    }
+
+    button {
+      background-color: #007bff;
+      border: none;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+
+  <link href="form-validation.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+  <div class="container">
+    <main>
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="logo.png" width="72" height="57">
+        <h2>Estás a un paso de terminar tu compra</h2>
+        <p class="lead">Selecciona tu método de pago</p>
+      </div>
+
+      <form class="card p-4">
+        <div class="input-group">
+          <hr class="my-4">
+
+          <h4 class="mb-4">Pago</h4>
+
+          <div class="my-3">
+            <div class="form-check">
+              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+              <label class="form-check-label" for="credit">Tarjeta de crédito</label>
+            </div>
+            <div class="form-check">
+              <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+              <label class="form-check-label" for="debit">Tarjeta de débito</label>
+            </div>
+
+            <div class="form-check">
+              <input id="yape" name="paymentMethod" type="radio" class="form-check-input" required>
+              <label class="form-check-label" for="yape">Yape</label>
+            </div>
+
+          </div>
+          <div id="creditDebitFields">
+            <div class="row gy-3">
+              <div class="col-md-6">
+                <label for="cc-name" class="form-label">Nombre en la tarjeta</label>
+                <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                <small class="text-muted">Nombre completo como se muestra en la tarjeta</small>
+                <div class="invalid-feedback">
+                  
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="cc-number" class="form-label">Número de Tarjeta de Crédito</label>
+                <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                <div class="invalid-feedback">
+                  
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <label for="cc-expiration" class="form-label">Vencimiento</label>
+                <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                <div class="invalid-feedback">
+                  
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <label for="cc-cvv" class="form-label">CVV</label>
+                <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                <div class="invalid-feedback">
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="yapeQRContainer" style="display: none;">
+            <img src="qryape.jpg" alt="Yape QR Code">
+          </div>
+
+          <script>
+            document.getElementById('yape').addEventListener('change', function () {
+              var yapeQRContainer = document.getElementById('yapeQRContainer');
+              var creditDebitFields = document.getElementById('creditDebitFields');
+              if (this.checked) {
+                yapeQRContainer.style.display = 'block';
+                creditDebitFields.style.display = 'none';
+              } else {
+                yapeQRContainer.style.display = 'none';
+                creditDebitFields.style.display = 'block';
+              }
+            });
+          </script>
+
+          <hr class="my-4">
+
+          <button onclick="alert('Pago realizado con éxito!');" class="w-100 btn btn-primary btn-lg"
+            type="submit">PAGAR</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+</body>
+
+</html>

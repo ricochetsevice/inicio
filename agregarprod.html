@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="logoService.jpg" />
+    <title>R I C O C H ET</title>
+    <style>
+
+.btn-flotante {
+	    font-size: 13px;
+        font-family: TrajanPro-Bold;
+	    text-transform: uppercase;
+	    color: #ffffff;
+	    border-radius: 5px;
+	    letter-spacing: 2px;
+	    background-color: rgba(0, 0, 0, 0.3);
+	    padding: 18px 30px;
+	    position: fixed;
+	    bottom: 40px;
+	    right: 40px;
+	    transition: all 300ms ease 0ms;
+	    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	    z-index: 99;
+        }
+        .btn-flotante:hover {
+	    color: #628C80;
+	    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+	   
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Agregar un producto RICOCHET</h2>
+        
+        <!-- Formulario para subir productos -->
+        <form id="productForm">
+            <label for="productName">Nombre del Producto:</label>
+            <input type="text" id="productName" name="productName" required> 
+
+            <label for="productImage">Imagen del Producto (URL):</label>
+            <input type="text" id="productImage" name="productImage" required>
+
+            <label for="productDescription">Nombre de la Empresa:</label>
+            <textarea id="productDescription" name="productDescription" required></textarea>
+
+            <label for="productStock">Cantidad en Stock:</label>
+            <input type="number" id="productStock" name="productStock" required>
+
+            <label for="productPrice">Precio del Producto:</label>
+            <input type="number" id="productPrice" name="productPrice" required>
+
+            <button type="button" onclick="addProduct()">Agregar Producto</button>
+        </form>
+
+        <!-- Espacio fijo de 20px -->   
+        <div style="margin-top: 20px;"></div>
+
+        <!-- Lista de productos -->
+        <div id="productList"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <a href="inicio.html" class="btn-flotante">Inicio</span></a>
+</body>
+</html>

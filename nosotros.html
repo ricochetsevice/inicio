@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<!-- belle/index.html   11 Nov 2019 12:16:10 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>R I C O C H ET</title>
+<meta name="description" content="description">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Favicon -->
+<link rel="shortcut icon" href="logoService.jpg" />
+<!-- Plugins CSS -->
+<link rel="stylesheet" href="assets/css/plugins.css">
+<!-- Bootstap CSS -->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<!-- Main Style CSS -->
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+
+<style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.video-container {
+    position: relative;
+    width: 300px; /* Tamaño inicial del contenedor del video */
+}
+
+#myVideo {
+    width: 100%;
+    height: auto;
+}
+</style>
+
+</head>
+<body class="template-index belle template-index-belle">
+<div id="pre-loader">
+    <img src="logo.png" alt="Loading..." />
+</div>
+<div class="pageWrapper">
+	<!--Search Form Drawer-->
+	<div class="search">
+        <div class="search__form">
+            <form class="search-bar__form" action="#">
+                <button class="go-btn search__button" type="submit"><i class="icon anm anm-search-l"></i></button>
+                <input class="search__input" type="search" name="q" value="" placeholder="Search entire store..." aria-label="Search" autocomplete="off">
+            </form>
+            <button type="button" class="search-trigger close-btn"><i class="anm anm-times-l"></i></button>
+        </div>
+    </div>
+    <!--End Search Form Drawer-->
+    <!--Top Header-->
+    <div class="top-header">
+        <div class="container-fluid">
+            <div class="row">
+            	<div class="col-10 col-sm-8 col-md-5 col-lg-4">
+                    
+                    <p class="phone-no"><i class="anm anm-phone-s"></i> +51 917 174 136</p>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4 d-none d-lg-none d-md-block d-lg-block">
+                	<div class="text-center"><p class="top-header_middle-text"> RICOCHET Envío Exprés </p></div>
+                </div>
+                <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
+                	<span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
+                    <ul class="customer-links list-inline">
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="#">Crear Cuenta</a></li>
+                        <li><a href="#">Lista de Deseos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Top Header-->
+    <!--Header-->
+    <div class="header-wrap animated d-flex">
+    	<div class="container-fluid">        
+            <div class="row align-items-center">
+            	<!--Desktop Logo-->
+                <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
+                    <a href="inicio.html">
+                    	<img src="logo.png" alt="Belle Multipurpose Html Template" title="Belle Multipurpose Html Template" />
+                    </a>
+                </div>
+                <!--End Desktop Logo-->
+                <div class="col-2 col-sm-3 col-md-3 col-lg-8">
+                	<div class="d-block d-lg-none">
+                        <button type="button" class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open">
+                        	<i class="icon anm anm-times-l"></i>
+                            <i class="anm anm-bars-r"></i>
+                        </button>
+                    </div>
+                	<!--Desktop Menu-->
+                	<nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
+                    <ul id="siteNav" class="site-nav medium center hidearrow">
+                        
+                        <li class="lvl1 parent megamenu"><a href="#">CATEGORÍAS <i class="anm anm-angle-down-l"></i></a>
+                          <div class="megamenu style4">
+                                <ul class="grid grid--uniform mmWrapper">
+                                  <li class="grid__item lvl-1 col-md-3 col-lg-3"><a href="#" class="site-nav lvl-1">Categorías</a>
+                                        <ul class="subLinks">
+                                            <li class="lvl-2"><a href="productos.html" class="site-nav lvl-2">Tops</a></li>
+                                            <li class="lvl-2"><a href="agregarprod.html" class="site-nav lvl-2">AGREGAR UN PRODUCTO</a></li>
+                                            
+                                        
+                                        </ul>
+                                    </li>
+                                    
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                  
+                    <li class="lvl1 parent dropdown"><a href="#">Nostros <i class="anm anm-angle-down-l"></i></a>
+                      <ul class="dropdown">
+                        
+                        <li><a href="nosotros.html" class="site-nav">¿Quienes Somos? <span class="lbl nm_label1">New</span> </a></li>
+                        
+                       
+                       
+                        
+                      </ul>
+                    </li>
+                   
+                </nav>
+                    <!--End Desktop Menu-->
+                </div>
+                <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-block d-lg-none mobile-logo">
+                	<div class="logo">
+                        <a href="index.html">
+                            <img src="logo.png" alt="Belle Multipurpose Html Template" title="Belle Multipurpose Html Template" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-4 col-sm-3 col-md-3 col-lg-2">
+                	<div class="site-cart">
+                    	<a href="#" class="site-header__cart" title="Cart">
+                        	<i class="icon anm anm-bag-l"></i>
+                            <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count">2</span>
+                        </a>
+                        <!--Minicart Popup-->
+                        <div id="header-cart" class="block block-cart">
+                        	<ul class="mini-products-list">
+                                <li class="item">
+                                	<a class="product-image" href="#">
+                                    	<img src="assets/images/tienda-productos/polos/polotop.png" alt = " Sleeve Kimono Dress" title="" />
+                                    </a>
+                                    <div class="product-details">
+                                    	<a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
+                                        <a href="#" class="edit-i remove"><i class="anm anm-edit" aria-hidden="true"></i></a>
+                                        <a class="pName" href="cart.html">Top Mujer Jenna Coco</a>
+                                        <div class="variant-cart">Talla : S</div>
+                                        <div class="wrapQtyBtn">
+                                            <div class="qtyField">
+                                            	<span class="label">Cantidad:</span>
+                                                <a class="qtyBtn minus" href="javascript:void(0);"><i class="fa anm anm-minus-r" aria-hidden="true"></i></a>
+                                                <input type="text" id="Quantity" name="quantity" value="1" class="product-form__input qty">
+                                                <a class="qtyBtn plus" href="javascript:void(0);"><i class="fa anm anm-plus-r" aria-hidden="true"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="priceRow">
+                                        	<div class="product-price">
+                                            	<span class="money">S/ 48.93</span>
+                                            </div>
+                                         </div>
+									</div>
+                                </li>
+                                <li class="item">
+                                	<a class="product-image" href="#">
+                                    	<img src="assets/images/tienda-productos/polos/polotop2.png" alt="Elastic Waist Dress - Black / Small" title="" />
+                                    </a>
+                                    <div class="product-details">
+                                    	<a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
+                                        <a href="#" class="edit-i remove"><i class="anm anm-edit" aria-hidden="true"></i></a>
+                                        <a class="pName" href="#">Polo Mujer Ginevra Coco</a>
+                                        <div class="variant-cart">Talla : M</div>
+                                        <div class="wrapQtyBtn">
+                                            <div class="qtyField">
+                                            	<span class="label">Cantidad:</span>
+                                                <a class="qtyBtn minus" href="javascript:void(0);"><i class="fa anm anm-minus-r" aria-hidden="true"></i></a>
+                                                <input type="text" id="Quantity" name="quantity" value="1" class="product-form__input qty">
+                                                <a class="qtyBtn plus" href="javascript:void(0);"><i class="fa anm anm-plus-r" aria-hidden="true"></i></a>
+                                            </div>
+                                        </div>
+                                       	<div class="priceRow">
+                                            <div class="product-price">
+                                                <span class="money">S/48.93</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="total">
+                            	<div class="total-in">
+                                	<span class="label">Total del Carrito:</span><span class="product-price"><span class="money">S/446</span></span>
+                                </div>
+                                 <div class="buttonSet text-center">
+                                    <a href="#" class="btn btn-secondary btn--small">Ver Carrito</a>
+                                    <a href="#" class="btn btn-secondary btn--small">Pagar</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Minicart Popup-->	
+                    </div>
+                    <div class="site-header__search">
+                    	<button type="button" class="search-trigger"><i class="icon anm anm-search-l"></i></button>
+                    </div>
+                </div>
+        	</div>
+        </div>
+    </div>
+    <!--End Header-->
+    <!--Mobile Menu-->
+    <div class="mobile-nav-wrapper" role="navigation">
+		<div class="closemobileMenu"><i class="icon anm anm-times-l pull-right"></i> MENU RICOCHET</div>
+        <ul id="MobileNav" class="mobile-nav">
+        	<li class="lvl1 parent megamenu"><a href="inicio.html">CATEGORÍAS <i class="anm anm-plus-l"></i></a>
+          <ul>
+            <li><a href="#" class="site-nav">Tops<i class="anm anm-plus-l"></i></a>
+              <ul>
+                <li><a href="productos.html" class="site-nav">Ropa</a></li>
+                <li><a href="agregarprod.html" class="site-nav">AGREGAR PRODUCTOS</a></li>
+                <li><a href="nosotros.html" class="site-nav">Nosotros </a></li>
+               
+              </ul>
+            </li>
+           
+	</div>
+	<!--End Mobile Menu-->
+    
+    <!--Body Content-->
+    <div id="page-content">
+    	<!--Page Title-->
+    	<div class="page section-header text-center">
+			<div class="page-title">
+        		<div class="wrapper"><h1 class="page-width">SOBRE NOSOTROS</h1></div>
+      		</div>
+		</div>
+        <!--End Page Title-->
+        
+        <div class="container">
+        	<div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 main-col">
+                	<div class="text-center mb-4">
+                        <h2 class="h2">SOMOS UNA STARTUP </h2>
+                        <div class="rte-setting">
+                            <p><strong>Por medio de esta Web podras hacer tus compras al por mayor de tus prendas favoritas</strong></p>
+                            <p>Como propuesta tenemos la creación de un PÁGINA WEB para facilitar a los pequeños comerciantes 
+                                y el abastecimiento con productos de moda y temporada, por medio de este aplicativo brindar 
+                                conferencias a los comerciantes.</p>
+                        </div>
+                    </div>
+               	</div>
+            </div>
+            <div class="row">
+            	
+                
+                <div class="video-container">
+                    <video id="myVideo" src="assets/videos/video.mp4" controls></video>
+                </div>
+                <script src="script.js"></script>
+            </div>
+            <div class="row">
+            	<div class="col-12">
+                    <h2>SITUACIÓN PROBLEMÁTICA</h2>
+                    <p>En la actualidad la industria textil peruana se enfrenta a una dura competencia de los productos 
+                        textiles de otros países como China. (comexperu 2022)</p>
+                    <p>Durante el primer mes de 2022, las
+                        importaciones textiles hacia el Perú alcanzaron un monto de US $227.6 millones.</p>
+                    <p></p>
+                </div>
+            </div>
+            
+            <div class="row">
+            	<div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-4">
+                	<h2 class="h2">ACERCA DE RICOCHET</h2>
+                    <div class="rte-setting"><p><strong>Somos una tienda online que vende todo tipo de ropa textil al por mayor .</strong></p>
+                    <p>Si usas un cupón de descuento puedes recibir hasta el 70% de descuento.</p>
+                    <p> </p>
+                    <p>Hacemos sorteos todos los días por nuestras redes sociales</p></div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                	<h2 class="h2">Contactanos</h2>
+                    <ul class="addressFooter">
+                        <li><i class="icon anm anm-map-marker-al"></i><p>RICOCHET</p></li>
+                        <li class="phone"><i class="icon anm anm-phone-s"></i><p>+51 917 174 136</p></li>
+                        <li class="email"><i class="icon anm anm-envelope-l"></i><p>paredesliles9@autonoma.edu.pe</p></li>
+                    </ul>
+                    <hr />
+                   
+                </div>
+            </div>
+            
+            
+        </div>
+        
+    </div>
+    <!--End Body Content-->
+    
+    <!--Footer-->
+    <footer id="footer">
+        <div class="newsletter-section">
+            <div class="container">
+                <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-7 w-100 d-flex justify-content-start align-items-center">
+                            <div class="display-table">
+                                <div class="display-table-cell footer-newsletter">
+                                    <div class="section-header text-center">
+                                        <label class="h2"><span>Rico </span>Chet</label>
+                                    </div>
+                                    <form action="#" method="post">
+                                        <div class="input-group">
+                                            <input type="email" class="input-group__field newsletter__input" name="EMAIL" value="" placeholder="¿Tienes alguna sugerencia?" required="">
+                                            <span class="input-group__btn">
+                                                <button type="submit" class="btn newsletter__submit" name="commit" id="Subscribe"><span class="newsletter__submit-text--large">Enviar</span></button>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+            </div>    
+        </div>
+        <div class="site-footer">
+        	<div class="container">
+     			<!--Footer Links-->
+            	<div class="footer-top">
+                	<div class="row">
+                    	
+                        <div class="col-12 col-sm-12 col-md-3 col-lg-3 contact-box">
+                        	<h4 class="h4">Contactactanos</h4>
+                            <ul class="addressFooter">
+                            	<li><i class="icon anm anm-map-marker-al"></i><p>Equipo de RICOCHET<br></p></li>
+                                <li class="phone"><i class="icon anm anm-phone-s"></i><p>+51 917 174 136</p></li>
+                                <li class="email"><i class="icon anm anm-envelope-l"></i><p>paredesliles9@autonoma.edu.pe</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--End Footer Links-->
+                <hr>
+                <div class="footer-bottom">
+                	<div class="row">
+                    	<!--Footer Copyright-->
+	                	<div class="col-12 col-sm-12 col-md-6 col-lg-6 order-1 order-md-0 order-lg-0 order-sm-1 copyright text-sm-center text-md-left text-lg-left"><span></span> <a href="#">----Todos los derechos de autor @PROYECTO RICOCHET</a></div>
+                        <!--End Footer Copyright-->
+                        <!--Footer Payment Icon-->
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 order-0 order-md-1 order-lg-1 order-sm-0 payment-icons text-right text-md-center">
+                        	<ul class="payment-icons list--inline">
+                        		<li><i class="icon fa fa-cc-visa" aria-hidden="true"></i></li>
+                                <li><i class="icon fa fa-cc-mastercard" aria-hidden="true"></i></li>
+                                <li><i class="icon fa fa-cc-discover" aria-hidden="true"></i></li>
+                                <li><i class="icon fa fa-cc-paypal" aria-hidden="true"></i></li>
+                                <li><i class="icon fa fa-cc-amex" aria-hidden="true"></i></li>
+                                <li><i class="icon fa fa-credit-card" aria-hidden="true"></i></li>
+                            </ul>
+                        </div>
+                        <!--End Footer Payment Icon-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--End Footer-->
+    <!--Scoll Top-->
+    <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
+    <!--End Scoll Top-->
+    
+     <!-- Including Jquery -->
+     <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
+     <script src="assets/js/vendor/jquery.cookie.js"></script>
+     <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+     <script src="assets/js/vendor/wow.min.js"></script>
+     <!-- Including Javascript -->
+     <script src="assets/js/bootstrap.min.js"></script>
+     <script src="assets/js/plugins.js"></script>
+     <script src="assets/js/popper.min.js"></script>
+     <script src="assets/js/lazysizes.js"></script>
+     <script src="assets/js/main.js"></script>
+</div>
+</body>
+
+<!-- belle/about-us.html   11 Nov 2019 12:44:39 GMT -->
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logoService.jpg" />
+    <title>Panel de ventas RICOCHET</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            color: #ffd700; /* Color dorado para el texto del perfil del usuario */
+        }
+
+        .logout-btn {
+            margin-left: 10px;
+            cursor: pointer;
+            color: #ff4500; /* Color rojo para el botón de cerrar sesión */
+        }
+
+        nav {
+            background-color: #555;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        section {
+            margin: 20px;
+            display: none;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #555;
+            color: #fff;
+        }
+        .btn-flotante {
+	    font-size: 13px;
+        font-family: TrajanPro-Bold;
+	    text-transform: uppercase;
+	    color: #ffffff;
+	    border-radius: 5px;
+	    letter-spacing: 2px;
+	    background-color: rgba(0, 0, 0, 0.3);
+	    padding: 18px 30px;
+	    position: fixed;
+	    bottom: 40px;
+	    right: 40px;
+	    transition: all 300ms ease 0ms;
+	    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	    z-index: 99;
+        }
+        .btn-flotante:hover {
+	    color: #628C80;
+	    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+	   
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Panel de ventas RICOCHET</h1>
+    <div class="user-profile">
+        <span>Bienvenida, [Lilian Paredes]</span>
+        <span class="logout-btn" onclick="cerrarSesion()">Cerrar Sesión</span>
+    </div>
+</header>
+<script>
+    function cerrarSesion() {
+        window.location.href = "inicio.html";
+        alert('Sesión cerrada');
+    }
+
+    function mostrarSeccion(seccionId) {
+        var secciones = document.querySelectorAll('section');
+        secciones.forEach(function(seccion) {
+            seccion.style.display = 'none';
+        });
+
+        var seccionSeleccionada = document.getElementById(seccionId);
+        seccionSeleccionada.style.display = 'block';
+    }
+</script>
+
+<!-- Menú de navegación -->
+<nav>
+    <ul>
+        <li><a href="javascript:void(0);" onclick="mostrarSeccion('ventaProductos')">Venta de productos</a></li>
+        <li><a href="javascript:void(0);" onclick="mostrarSeccion('stockProductos')">Stock de productos</a></li>
+        <li><a href="javascript:void(0);" onclick="mostrarSeccion('personalAutorizado')">Personal Autorizado</a></li>
+    </ul>
+</nav>
+
+<!-- Sección de Venta de productos -->
+<section id="ventaProductos">
+    <h2>Venta de productos</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre del producto</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Dirección de envío</th>
+                <th>Fecha de venta</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Filas de datos de ventas -->
+            <!-- ... -->
+            <tr>
+                <td>1</td>
+                <td>Top Mujer Jenna Coco</td>
+                <td>1</td>
+                <td>S/ 48.03</td>
+                <td>Villa el Salvador</td>
+                <td>2023-11-12</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Polo Mujer Ginevra Coco</td>
+                <td>1</td>
+                <td>S/ 48.93</td>
+                <td>San Juan de Miraflores</td>
+                <td>2023-11-14</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Polo Mujer Caimili Morado	</td>
+                <td>1</td>
+                <td>S/  41.93</td>
+                <td>Chorrillos</td>
+                <td>2023-11-14</td>
+            </tr>
+
+
+            <tr>
+                <td>4</td>
+                <td>Polo Mujer Salsa Turquesa Intenso</td>
+                <td>1</td>
+                <td>S/ 39.95</td>
+                <td>Lince</td>
+                <td>2023-11-14</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>Top Mujer Azahara Amarillo Trevi</td>
+                <td>1</td>
+                <td>S/ 48.93</td>
+                <td>Olivos</td>
+                <td>2023-11-14</td>
+            </tr>
+            <!-- Add more rows as needed -->
+
+            <tr>
+                <td>6</td>
+                <td>Top Mujer Jenna Coco</td>
+                <td>4</td>
+                <td>S/ 192.12</td>
+                <td>Ate</td>
+                <td>2023-11-14</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Polo Mujer Ginevra Coco</td>
+                <td>6</td>
+                <td>S/ 244.65</td>
+                <td>Villa Maria</td>
+                <td>2023-11-14</td>
+            </tr>
+
+            <tr>
+                <td>8</td>
+                <td>Polo Mujer Caimili Morado</td>
+                <td>10</td>
+                <td>S/ 419.30</td>
+                <td>Ancon</td>
+                <td>2023-11-14</td>
+            </tr>
+
+
+            <tr>
+                <td>9</td>
+                <td>Polo Mujer Salsa Turquesa Intenso</td>
+                <td>15</td> 
+                <td>S/ 599.25</td>
+                <td>Magdalena</td>
+                <td>2023-11-14</td>
+            </tr>
+
+            <tr>
+                <td>10</td>
+                <td>Top Mujer Azahara Amarillo Trevi</td>
+                <td>20</td>
+                <td>S/ 978.60</td>
+                <td>Surco</td>
+                <td>2023-11-14</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+<section>
+    <h2>Stock de productos</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre del producto</th>
+                <th>Cantidad disponible</th>
+                <th>Precio unitario</th>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- Sección de Stock de productos -->
+<section id="stockProductos">
+    <h2>Stock de productos</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre del producto</th>
+                <th>Cantidad disponible</th>
+                <th>Precio unitario</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Filas de datos de stock -->
+            <!-- ... -->
+            <tr>
+                <td>1</td>
+                <td>Top Mujer Jenna Coco</td>
+                <td>50</td>
+                <td>S/ 48.93</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Polo Mujer Ginevra Coco</td>
+                <td>30</td>
+                <td>S/ 48.93</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Polo Mujer Caimili Morado</td>
+                <td>23</td>
+                <td>S/ 41.93</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Polo Mujer Salsa Turquesa Intenso</td>
+                <td>38</td>
+                <td>S/ 39.95</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Top Mujer Azahara Amarillo Trevi</td>
+                <td>17</td>
+                <td>S/ 48.93</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+        <!--Personal Autorizado-->
+        <section id="personalAutorizado">
+            <h2>Personal Autorizado para administrar en panel de control</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre del administrador</th>
+                        <th>Correo Institucional</th>
+                       
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Filas de datos de stock -->
+                    <!-- ... -->
+                    <tr>
+                        <td>1</td>
+                        <td>Paredes Gonzales, Liliana</td>
+                        <td>paredesliles9@autonoma.edu.pe</td>
+                       
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Bautista Ayala, Leonardo</td>
+                        <td>ibaustistaa@autonoma.edu.pe</td>
+                       
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Escalante tito, Angela Yamile</td>
+                        <td>correo</td>
+                       
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Vargas Riquelme, Josué Aaron</td>
+                        <td>correo</td>
+                       
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Rodríguez Guevara, Jacob </td>
+                        <td>correo</td>
+                       
+                    </tr>
+
+                    <tr>
+                        <td>6</td>
+                        <td>olís Fierro, Windie Sofia </td>
+                        <td>correo</td>
+                       
+                    </tr>
+            
+                </tbody>
+            </table>
+        </section>
+
+</body>
+</html>
